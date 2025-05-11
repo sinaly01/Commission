@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BDCOV - Espace Enseignant</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    
+    
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <div class="logo-container">
+            <h5 class="text-white m-0">VOTRE LOGO</h5>
+        </div>
+        <div class="mt-4">
+            <a href="#" class="nav-link active">
+                <i class="fas fa-tachometer-alt"></i> Tableau de bord
+            </a>
+            <a href="#" class="nav-link">
+                <i class="fas fa-file-alt"></i> Rapports à évaluer
+            </a>
+            <a href="#" class="nav-link d-flex justify-content-between">
+                <div>
+                    <i class="fas fa-envelope"></i> Messages
+                </div>
+                <span class="badge bg-danger rounded-pill">5</span>
+            </a>
+            <a href="#" class="nav-link">
+                <i class="fas fa-users"></i> Mes jurys
+            </a>
+            <a href="#" class="nav-link">
+                <i class="fas fa-calendar-alt"></i> Agenda
+            </a>
+            <a href="#" class="nav-link">
+                <i class="fas fa-check-square"></i> Validation de rapports
+            </a>
+            <a href="#" class="nav-link">
+                <i class="fas fa-clipboard-list"></i> Comptes rendus
+            </a>
+            <a href="#" class="nav-link">
+                <i class="fas fa-cog"></i> Paramètres
+            </a>
+            <a href="#" class="nav-link text-danger">
+                <i class="fas fa-sign-out-alt"></i> Déconnexion
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <div class="header">
+            <div class="d-flex align-items-center">
+                <h2 class="page-title">
+                    <i class="fas fa-chalkboard-teacher me-2"></i>
+                    Espace Enseignant
+                </h2>
+                <div class="ms-4 d-none d-md-block">
+                    <span class="badge bg-success p-2">Année académique: 2024-2025</span>
+                </div>
+            </div>
+            
+            <div class="d-flex align-items-center gap-4">
+                <div class="d-none d-md-flex align-items-center">
+                    <span class="text-dark me-3">Bienvenue, <strong>Prof. Martin DUBOIS</strong></span>
+                </div>
+                <div class="dropdown me-3">
+                    <a class="btn btn-light position-relative rounded-circle p-2" href="#" role="button" id="notificationDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-bell"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            4
+                            <span class="visually-hidden">nouvelles notifications</span>
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="notificationDropdown" style="min-width: 320px;">
+                        <li><h6 class="dropdown-header bg-light py-3">Notifications</h6></li>
+                        <li><a class="dropdown-item py-3 border-bottom" href="#">
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0">
+                                    <div class="bg-primary text-white rounded-circle p-2">
+                                        <i class="fas fa-file-alt"></i>
+                                    </div>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <p class="mb-0 fw-bold">Nouveau rapport à valider</p>
+                                    <small class="text-muted">Il y a 2 heures</small>
+                                </div>
+                            </div>
+                        </a></li>
+                        <li><a class="dropdown-item py-3 border-bottom" href="#">
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0">
+                                    <div class="bg-success text-white rounded-circle p-2">
+                                        <i class="fas fa-calendar-check"></i>
+                                    </div>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <p class="mb-0 fw-bold">Réunion de jury programmée</p>
+                                    <small class="text-muted">Il y a 1 jour</small>
+                                </div>
+                            </div>
+                        </a></li>
+                        <li><a class="dropdown-item py-3 border-bottom" href="#">
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0">
+                                    <div class="bg-warning text-white rounded-circle p-2">
+                                        <i class="fas fa-user-graduate"></i>
+                                    </div>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <p class="mb-0 fw-bold">Notes à soumettre</p>
+                                    <small class="text-muted">Il y a 2 jours</small>
+                                </div>
+                            </div>
+                        </a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item text-center py-2" href="#">Voir toutes les notifications</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <a class="btn btn-outline-dark d-flex align-items-center" href="#" role="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="user-avatar me-2 bg-white">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <span class="d-none d-md-inline">Mon compte</span>
+                        <i class="fas fa-chevron-down ms-2 d-none d-md-inline"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="userDropdown">
+                        <li><div class="dropdown-header bg-light py-3">Prof. Martin DUBOIS</div></li>
+                        <li><a class="dropdown-item py-2" href="#"><i class="fas fa-user-circle me-2"></i>Mon profil</a></li>
+                        <li><a class="dropdown-item py-2" href="#"><i class="fas fa-cog me-2"></i>Paramètres</a></li>
+                        <li><a class="dropdown-item py-2" href="#"><i class="fas fa-question-circle me-2"></i>Aide</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item text-danger py-2" href="#"><i class="fas fa-sign-out-alt me-2"></i>Déconnexion</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-area">
+            <div class="row g-4">
+                <!-- Statistiques générales -->
+                <div class="col-md-12">
+                    <div class="row g-4">
+                        <div class="col-md-3">
+                            <div class="stat-card">
+                                <div class="stat-value">7</div>
+                                <div class="stat-label">Rapports à valider</div>
+                                <div class="stat-icon">
+                                    <i class="fas fa-file-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="stat-card">
+                                <div class="stat-value">3</div>
+                                <div class="stat-label">Jurys à venir</div>
+                                <div class="stat-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="stat-card">
+                                <div class="stat-value">12</div>
+                                <div class="stat-label">Étudiants encadrés</div>
+                                <div class="stat-icon">
+                                    <i class="fas fa-user-graduate"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="stat-card">
+                                <div class="stat-value">5</div>
+                                <div class="stat-label">Comptes rendus</div>
+                                <div class="stat-icon">
+                                    <i class="fas fa-clipboard-check"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profil enseignant -->
+                <div class="col-md-4">
+                    <div class="dashboard-card">
+                        <h5 class="mb-4"><i class="fas fa-id-badge me-2"></i>Profil enseignant</h5>
+                        <div class="text-center mb-4">
+                            <div class="d-inline-block p-3 rounded-circle bg-light mb-3">
+                                <i class="fas fa-user-tie fa-3x text-secondary"></i>
+                            </div>
+                            <h4>Prof. Martin DUBOIS</h4>
+                            <span class="badge bg-primary">Professeur Titulaire</span>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-12 mb-3">
+                                <label class="form-label small text-muted">ID Enseignant</label>
+                                <div class="fw-medium">ENS202500042</div>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <label class="form-label small text-muted">Email</label>
+                                <div class="fw-medium">martin.dubois@univ.com</div>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <label class="form-label small text-muted">Spécialité</label>
+                                <div class="fw-medium">Intelligence Artificielle et Science des Données</div>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <label class="form-label small text-muted">Grade académique</label>
+                                <div class="fw-medium">Professeur des Universités</div>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <label class="form-label small text-muted">Fonction</label>
+                                <div class="fw-medium">Directeur de Département</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tâches à faire -->
+                <div class="col-md-8">
+                    <div class="dashboard-card">
+                        <h5 class="mb-4"><i class="fas fa-tasks me-2"></i>Tâches à effectuer</h5>
+                        <div class="task-item urgent">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="mb-1">Valider le rapport de Laura Jane</h6>
+                                    <p class="small mb-0">Date limite: 05/05/2025</p>
+                                </div>
+                                <span class="badge bg-danger">Urgent</span>
+                            </div>
+                        </div>
+                        <div class="task-item">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="mb-1">Évaluer les rapports des étudiants de Master 2</h6>
+                                    <p class="small mb-0">Date limite: 10/05/2025</p>
+                                </div>
+                                <span class="badge bg-warning">Important</span>
+                            </div>
+                        </div>
+                        <div class="task-item">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="mb-1">Soumettre les notes d'évaluation pour le cours IA-304</h6>
+                                    <p class="small mb-0">Date limite: 15/05/2025</p>
+                                </div>
+                                <span class="badge bg-info">En cours</span>
+                            </div>
+                        </div>
+                        <div class="task-item completed">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="mb-1 text-decoration-line-through">Remettre le compte rendu de la réunion départementale</h6>
+                                    <p class="small mb-0">Complété le: 01/05/2025</p>
+                                </div>
+                                <span class="badge bg-success">Terminé</span>
+                            </div>
+                        </div>
+                        <div class="text-end mt-3">
+                            <button class="btn btn-outline-primary btn-sm">
+                                <i class="fas fa-plus me-2"></i>Ajouter une tâche
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rapports à valider -->
+                <div class="col-md-8">
+                    <div class="dashboard-card">
+                        <h5 class="mb-4"><i class="fas fa-file-signature me-2"></i>Rapports à valider</h5>
+                        <div class="report-card">
+                            <div class="d-flex justify-content-between">
+                                <h6>Système d'intelligence artificielle pour la détection des fraudes bancaires</h6>
+                                <span class="status-badge status-new">Nouveau</span>
+                            </div>
+                            <div class="small text-muted mb-2">Soumis par: Laura Jane SMITH - Master 2</div>
+                            <div class="small text-muted mb-3">Date de soumission: 01/05/2025</div>
+                            <div class="report-actions">
+                                <button class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-eye me-1"></i> Voir
+                                </button>
+                                <button class="btn btn-sm btn-success">
+                                    <i class="fas fa-check me-1"></i> Approuver
+                                </button>
+                                <button class="btn btn-sm btn-danger">
+                                    <i class="fas fa-times me-1"></i> Rejeter
+                                </button>
+                                <button class="btn btn-sm btn-outline-secondary">
+                                    <i class="fas fa-comment me-1"></i> Commenter
+                                </button>
+                            </div>
+                        </div>
+                        <div class="report-card">
+                            <div class="d-flex justify-content-between">
+                                <h6>Optimisation des algorithmes de deep learning pour la reconnaissance d'images</h6>
+                                <span class="status-badge status-pending">En attente</span>
+                            </div>
+                            <div class="small text-muted mb-2">Soumis par: Marc ANTOINE - Master 2</div>
+                            <div class="small text-muted mb-3">Date de soumission: 28/04/2025</div>
+                            <div class="report-actions">
+                                <button class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-eye me-1"></i> Voir
+                                </button>
+                                <button class="btn btn-sm btn-success">
+                                    <i class="fas fa-check me-1"></i> Approuver
+                                </button>
+                                <button class="btn btn-sm btn-danger">
+                                    <i class="fas fa-times me-1"></i> Rejeter
+                                </button>
+                                <button class="btn btn-sm btn-outline-secondary">
+                                    <i class="fas fa-comment me-1"></i> Commenter
+                                </button>
+                            </div>
+                        </div>
+                        <div class="report-card">
+                            <div class="d-flex justify-content-between">
+                                <h6>Analyse des méthodes de cybersécurité dans les systèmes bancaires</h6>
+                                <span class="status-badge status-pending">En attente</span>
+                            </div>
+                            <div class="small text-muted mb-2">Soumis par: Sophie MARTIN - Licence 3</div>
+                            <div class="small text-muted mb-3">Date de soumission: 27/04/2025</div>
+                            <div class="report-actions">
+                                <button class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-eye me-1"></i> Voir
+                                </button>
+                                <button class="btn btn-sm btn-success">
+                                    <i class="fas fa-check me-1"></i> Approuver
+                                </button>
+                                <button class="btn btn-sm btn-danger">
+                                    <i class="fas fa-times me-1"></i> Rejeter
+                                </button>
+                                <button class="btn btn-sm btn-outline-secondary">
+                                    <i class="fas fa-comment me-1"></i> Commenter
+                                </button>
+                            </div>
+                        </div>
+                        <div class="text-center mt-3">
+                            <button class="btn btn-primary">
+                                <i class="fas fa-list me-2"></i>Voir tous les rapports
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Agenda / Calendrier -->
+                <div class="col-md-4">
+                    <div class="dashboard-card">
+                        <h5 class="mb-4"><i class="fas fa-calendar-alt me-2"></i>Agenda</h5>
+                        <div class="calendar-event">
+                            <h6>Réunion du Département</h6>
+                            <div class="small"><i class="fas fa-clock me-1"></i> 08/05/2025, 10:00 - 12:00</div>
+                            <div class="small"><i class="fas fa-map-marker-alt me-1"></i> Salle de conférence A</div>
+                        </div>
+                        <div class="calendar-event">
+                            <h6>Soutenance - Laura Jane</h6>
+                            <div class="small"><i class="fas fa-clock me-1"></i> 12/05/2025, 14:00 - 16:00</div>
+                            <div class="small"><i class="fas fa-map-marker-alt me-1"></i> Amphi B</div>
+                        </div>
+                        <div class="calendar-event">
+                            <h6>Commission académique</h6>
+                            <div class="small"><i class="fas fa-clock me-1"></i> 15/05/2025, 09:00 - 11:00</div>
+                            <div class="small"><i class="fas fa-map-marker-alt me-1"></i> Salle du conseil</div>
+                        </div>
+                        <div class="calendar-event">
+                            <h6>Jury de délibération - Master 2</h6>
+                            <div class="small"><i class="fas fa-clock me-1"></i> 20/05/2025, 13:00 - 17:00</div>
+                            <div class="small"><i class="fas fa-map-marker-alt me-1"></i> Salle de conférence C</div>
+                        </div>
+                        <div class="text-center mt-3">
+                            <button class="btn btn-outline-primary btn-sm">
+                                <i class="fas fa-plus me-2"></i>Ajouter un événement
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Jurys assignés -->
+                <div class="col-md-12">
+                    <div class="dashboard-card">
+                        <h5 class="mb-4"><i class="fas fa-users me-2"></i>Mes jurys assignés</h5>
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
